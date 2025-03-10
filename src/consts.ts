@@ -13,8 +13,8 @@ export const USER_NAME = "克喵爱吃卤面";
 export const USER_SITE = "https://kmblog.kemiaosw.top"; // At the same time, this is also the site retrieved by the i18n configuration.
 export const USER_AVATAR = "https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/Kemeow815avatar.png";
 
-// waline comment
-export const SERVER_URL =  "https://waline.frosti.kemiaosw.top";
+// // waline comment
+// export const SERVER_URL =  "https://waline.frosti.kemiaosw.top";
 
 // Theme settings
 export const DAISYUI_THEME = {
