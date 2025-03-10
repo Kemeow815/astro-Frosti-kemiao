@@ -1,7 +1,3 @@
----
-import { SERVER_URL } from "../consts";
----
-
 <br />
 <link
   rel="stylesheet"
@@ -18,7 +14,7 @@ import { SERVER_URL } from "../consts";
     .getAttribute("data-server-url");
   init({
     el: "#waline-comment-system",
-    serverURL: 'https://waline.frosti.kemeow.top',
+    serverURL,
     dark: 'html[data-theme="dracula"]',
     reaction: [
       "/reaction/good.png",
