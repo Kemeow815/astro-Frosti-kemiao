@@ -80,6 +80,10 @@ user:
         ariaLabel: BiliBili
         title: BiliBili
         svg: "ri:bilibili-line"
+      - href: "https://t.me/KemiaoJun"
+        ariaLabel: Telegram
+        title: Telegram
+        svg: "ri:telegram-line"
       - href: "https://x.com/kemiaosw"
         ariaLabel: X(twitter)
         title: X(twitter)
@@ -98,6 +102,10 @@ user:
         ariaLabel: BiliBili
         title: BiliBili
         svg: "ri:bilibili-line"
+      - href: "https://t.me/KemiaoJun"
+        ariaLabel: Telegram
+        title: Telegram
+        svg: "ri:telegram-line"
       - href: "https://x.com/kemiaosw"
         ariaLabel: X(twitter)
         title: X(twitter)
