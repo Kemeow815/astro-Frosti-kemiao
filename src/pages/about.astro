@@ -5,31 +5,41 @@ import MainCard from "@/components/MainCard.astro";
 import GitHubStats from "@/components/mdx/GitHubStats.astro";
 ---
 
-<BaseLayout title="About">
+<BaseLayout title="关于">
   <MainCard
-    title="About SunMaple"
-    description="Developer, open-source enthusiast, and creator of the Frosti blog theme."
+    title="关于 克喵爱吃卤面"
+    description="大学生, 资源分享者, 一个普通人。"
     textOverlay="ABOUT"
     infoIcon="lucide:user"
   >
     <div class="space-y-10 mb-8">
       <!-- Profile Section -->
-      <section class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+      <section
+        class="flex flex-col md:flex-row gap-8 items-center md:items-start"
+      >
         <div class="avatar">
           <div
             class="w-32 h-32 md:w-40 md:h-40 rounded-xl ring ring-primary ring-offset-base-100 ring-offset-2 overflow-hidden"
           >
-            <img src="https://github.com/EveSunMaple.png" alt="SunMaple" width="160" height="160" loading="eager" />
+            <img
+              src="https://github.com/Kemeow815.png"
+              alt="克喵爱吃卤面"
+              width="160"
+              height="160"
+              loading="eager"
+            />
           </div>
         </div>
 
         <div class="flex-1 text-center md:text-left">
-          <h1 class="text-3xl md:text-4xl font-bold mb-2">SunMaple</h1>
-          <p class="text-xl text-base-content/80 mb-4">Developer & Open-Source Enthusiast</p>
+          <h1 class="text-3xl md:text-4xl font-bold mb-2">克喵爱吃卤面</h1>
+          <p class="text-xl text-base-content/80 mb-4">每一段旅行都有终点~</p>
 
-          <div class="flex flex-wrap gap-3 justify-center md:justify-start mb-6">
+          <div
+            class="flex flex-wrap gap-3 justify-center md:justify-start mb-6"
+          >
             <a
-              href="https://github.com/EveSunMaple"
+              href="https://github.com/Kemeow815"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-sm btn-outline gap-2"
@@ -38,7 +48,7 @@ import GitHubStats from "@/components/mdx/GitHubStats.astro";
               <span>GitHub</span>
             </a>
             <a
-              href="https://twitter.com/EveSunMaple"
+              href="https://twitter.com/kemiaosw"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-sm btn-outline gap-2"
@@ -46,17 +56,19 @@ import GitHubStats from "@/components/mdx/GitHubStats.astro";
               <Icon name="lucide:twitter" class="w-4 h-4" />
               <span>Twitter</span>
             </a>
-            <a href="mailto:evesunmaple@outlook.com" class="btn btn-sm btn-outline gap-2">
+            <a
+              href="mailto:kemiaofx@163.com"
+              class="btn btn-sm btn-outline gap-2"
+            >
               <Icon name="lucide:mail" class="w-4 h-4" />
               <span>Email</span>
             </a>
           </div>
 
           <p class="text-base-content/80">
-            Hello! I'm SunMaple, a passionate developer focused on creating elegant, responsive, and efficient web
-            applications. I'm the creator of the Frosti blog theme, a modern Astro-based theme for content creators. I
-            love contributing to open-source projects and building tools that help others create beautiful digital
-            experiences.
+            你好，我叫克喵爱吃卤面，一个普通的在南京就读的大二大学生，学的是自动化技术与应用，
+            在这个博客里记录我的日常生活、资源分享和教程踩坑，我的部分内容来源于网络，
+            如果觉得我的内容侵犯了您的权益，可以联系我删除。
           </p>
         </div>
       </section>
@@ -68,7 +80,11 @@ import GitHubStats from "@/components/mdx/GitHubStats.astro";
           <span>GitHub Statistics</span>
         </h2>
 
-        <GitHubStats username="EveSunMaple" showLanguages={false} showCommitGraph={true} />
+        <GitHubStats
+          username="Kemeow815"
+          showLanguages={false}
+          showCommitGraph={true}
+        />
       </section>
 
       <!-- Tech Stack -->
@@ -78,21 +94,71 @@ import GitHubStats from "@/components/mdx/GitHubStats.astro";
           <span>Tech Stack</span>
         </h2>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+        >
           {
             [
-              { name: "Astro", icon: "simple-icons:astro", color: "oklch(0.5 0.2 300)" },
-              { name: "JavaScript", icon: "simple-icons:javascript", color: "oklch(0.8 0.2 80)" },
-              { name: "TypeScript", icon: "simple-icons:typescript", color: "oklch(0.6 0.2 250)" },
-              { name: "React", icon: "simple-icons:react", color: "oklch(0.7 0.2 200)" },
-              { name: "Node.js", icon: "simple-icons:nodedotjs", color: "oklch(0.7 0.2 140)" },
-              { name: "TailwindCSS", icon: "simple-icons:tailwindcss", color: "oklch(0.6 0.2 220)" },
-              { name: "HTML5", icon: "simple-icons:html5", color: "oklch(0.7 0.2 30)" },
-              { name: "CSS3", icon: "simple-icons:css3", color: "oklch(0.7 0.2 220)" },
-              { name: "Git", icon: "simple-icons:git", color: "oklch(0.7 0.2 30)" },
-              { name: "C++", icon: "simple-icons:cplusplus", color: "oklch(0.6 0.2 240)" },
-              { name: "C#", icon: "simple-icons:csharp", color: "oklch(0.6 0.2 160)" },
-              { name: "Python", icon: "simple-icons:python", color: "oklch(0.7 0.2 250)" },
+              {
+                name: "Astro",
+                icon: "simple-icons:astro",
+                color: "oklch(0.5 0.2 300)",
+              },
+              {
+                name: "Nuxt",
+                icon: "simple-icons:nuxt",
+                color: "oklch(0.8 0.2 80)",
+              },
+              {
+                name: "Wordpress",
+                icon: "simple-icons:wordpress",
+                color: "oklch(0.6 0.2 250)",
+              },
+              {
+                name: "React",
+                icon: "simple-icons:react",
+                color: "oklch(0.7 0.2 200)",
+              },
+              {
+                name: "Node.js",
+                icon: "simple-icons:nodedotjs",
+                color: "oklch(0.7 0.2 140)",
+              },
+              {
+                name: "TailwindCSS",
+                icon: "simple-icons:tailwindcss",
+                color: "oklch(0.6 0.2 220)",
+              },
+              {
+                name: "Vitepress",
+                icon: "simple-icons:vitepress",
+                color: "oklch(0.7 0.2 30)",
+              },
+              {
+                name: "Jekyll",
+                icon: "simple-icons:jekyll",
+                color: "oklch(0.7 0.2 220)",
+              },
+              {
+                name: "Git",
+                icon: "simple-icons:git",
+                color: "oklch(0.7 0.2 30)",
+              },
+              {
+                name: "Hexo",
+                icon: "simple-icons:hexo",
+                color: "oklch(0.6 0.2 240)",
+              },
+              {
+                name: "Blog",
+                icon: "simple-icons:blogger",
+                color: "oklch(0.6 0.2 160)",
+              },
+              {
+                name: "Hugo",
+                icon: "simple-icons:hugo",
+                color: "oklch(0.7 0.2 250)",
+              },
             ].map((tech) => (
               <div class="flex flex-col items-center justify-center p-4 bg-base-200 rounded-lg hover:bg-base-300 transition-colors">
                 <div class="text-3xl mb-2" style={`color: ${tech.color}`}>
@@ -113,28 +179,40 @@ import GitHubStats from "@/components/mdx/GitHubStats.astro";
         </h2>
 
         <div class="bg-base-200 rounded-xl p-6 overflow-x-auto">
-          <div class="flex flex-col md:flex-row gap-8 md:gap-4 md:overflow-x-auto md:pb-2">
+          <div
+            class="flex flex-col md:flex-row gap-8 md:gap-4 md:overflow-x-auto md:pb-2"
+          >
             {
               [
                 {
-                  date: "January 2024",
-                  title: "Open Source Contributions",
-                  desc: "Contributed to several open source projects, focusing on performance optimizations.",
+                  date: "2023年末",
+                  title: "接触小绿书的逆向软件",
+                  desc: "开始认识到资源分享，在小绿书度过了一段快乐的时光~",
                 },
                 {
-                  date: "March 2024",
-                  title: "Initiated Frosti Project",
-                  desc: "Started development of the Frosti blog theme for Astro, focusing on modern design principles.",
+                  date: "2024年初",
+                  title: "被小杯主编制裁后离开前往电报",
+                  desc: "支持中文搜索就是直接第一好的通讯软件，从此开始电报之旅~",
                 },
                 {
-                  date: "July 2024",
-                  title: "Released Frosti v2",
-                  desc: "Published version 2 with improved responsive design and extended plugin support.",
+                  date: "2024年初 - 2024年11月",
+                  title: "在电报开始接触资源分享频道",
+                  desc: "建立自己的频道，分享自己收集的资源。",
                 },
                 {
-                  date: "March 2025",
-                  title: "Released Frosti v3",
-                  desc: "Launched version 3 of the Frosti blog theme with enhanced performance and new customization options.",
+                  date: "2024年11月03日",
+                  title: "开始接触博客",
+                  desc: "第一个博客是面条实验室的博客",
+                },
+                {
+                  date: "2024年11月至今",
+                  title: "搭建博客",
+                  desc: "使用了各种框架：Hexo、Hugo、Astro、NotionNext、Github Pages、Vitepress、Vuepress等",
+                },
+                {
+                  date: "2025年3月",
+                  title: "搭建了这个博客",
+                  desc: "更新@EveSunMaple",
                 },
               ].map((item, i) => (
                 <div class="relative flex gap-4 pb-2 md:pb-0 md:min-w-[250px]">
@@ -145,7 +223,9 @@ import GitHubStats from "@/components/mdx/GitHubStats.astro";
                     <div class="w-0.5 h-16 bg-base-300 mt-2 md:hidden" />
                   </div>
                   <div>
-                    <div class="text-sm text-base-content/60 mb-1">{item.date}</div>
+                    <div class="text-sm text-base-content/60 mb-1">
+                      {item.date}
+                    </div>
                     <h3 class="text-lg font-bold">{item.title}</h3>
                     <p class="text-base-content/80 mt-1">{item.desc}</p>
                   </div>
