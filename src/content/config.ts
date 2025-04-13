@@ -10,6 +10,7 @@ const blog = defineCollection({
     image: z.string().optional(),
     badge: z.string().optional(),
     draft: z.boolean().default(false),
+    comment: z.boolean().default(true), // enable comments by default
     categories: z
       .array(z.string())
       .refine((items) => new Set(items).size === items.length, {

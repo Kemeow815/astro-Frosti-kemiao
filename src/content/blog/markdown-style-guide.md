@@ -6,7 +6,7 @@ image: /image/image3.png
 categories:
   - tech
 tags:
-  - Markdown
+  - Makrdown
 badge: Pin
 ---
 
