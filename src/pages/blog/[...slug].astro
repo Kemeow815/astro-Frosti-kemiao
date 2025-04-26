@@ -7,8 +7,8 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import dayjs from "@utils/dayjs";
 import { DATE_FORMAT } from "@config";
 import MainCard from "@/components/MainCard.astro";
-import CommentWaline from "@components/CommentWaline.astro";
-import "src/styles/waline.scss";
+// import "src/styles/waline.scss";
+import Waline from "../../components/comments/Waline.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -73,6 +73,9 @@ const displayDate = blog.data.pubDate
         />
       </div>
     </div>
-    <CommentWaline />
   </MainCard>
+    <section class="comments">
+      <h2>Comments</h2>
+      <Waline serverURL="https://waline.frosti.kemeow.top"/>
+    </section>
 </BaseLayout>

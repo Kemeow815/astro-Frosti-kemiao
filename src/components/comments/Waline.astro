@@ -1,0 +1,85 @@
+---
+// Props interface for the component
+interface Props {
+  serverURL: string; // Your Waline server URL
+  path?: string; // Optional custom path for comments
+  lang?: string; // Optional language setting
+  dark?: string; // Optional dark mode CSS selector
+  emoji?: string[]; // Optional emoji arrays
+  meta?: string[]; // Optional comment information to show
+  requiredMeta?: string[]; // Optional required metadata
+  reaction?: boolean; // Enable article reactions
+  pageview?: boolean; // Enable pageview statistics
+}
+
+// Destructure props with defaults
+const {
+  serverURL,
+  path = Astro.url.pathname,
+  lang = "en",
+  dark = "html.dark",
+  emoji = ["https://unpkg.com/@waline/emojis@1.1.0/weibo", "https://unpkg.com/@waline/emojis@1.1.0/bilibili"],
+  meta = ["nick", "mail", "link"],
+  requiredMeta = [],
+  reaction = false,
+  pageview = false,
+} = Astro.props;
+---
+
+<div id="waline-container"></div>
+
+<script
+  define:vars={{
+    serverURL,
+    path,
+    lang,
+    dark,
+    emoji,
+    meta,
+    requiredMeta,
+    reaction,
+    pageview,
+  }}
+>
+  document.addEventListener("DOMContentLoaded", async () => {
+    try {
+      // Load Waline CSS
+      const walineCSS = document.createElement("link");
+      walineCSS.rel = "stylesheet";
+      walineCSS.href = "https://unpkg.com/@waline/client@v3/dist/waline.css";
+      document.head.appendChild(walineCSS);
+
+      // Load Waline JS
+      const walineScript = document.createElement("script");
+      walineScript.src = "https://unpkg.com/@waline/client@v3/dist/waline.js";
+      walineScript.async = true;
+
+      walineScript.onload = () => {
+        // Initialize Waline
+        Waline.init({
+          el: "#waline-container",
+          serverURL: serverURL,
+          path: path,
+          lang: lang,
+          dark: dark,
+          emoji: emoji,
+          meta: meta,
+          requiredMeta: requiredMeta,
+          reaction: reaction,
+          pageview: pageview,
+        });
+      };
+
+      document.head.appendChild(walineScript);
+    } catch (error) {
+      console.error("Failed to load Waline:", error);
+    }
+  });
+</script>
+
+<style>
+  #waline-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+</style>
