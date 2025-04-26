@@ -1,5 +1,5 @@
+
 import mdx from "@astrojs/mdx";
-import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import playformCompress from "@playform/compress";
@@ -8,7 +8,6 @@ import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypeKatex from "rehype-katex";
-
 import remarkMath from "remark-math";
 
 import { CODE_THEME, USER_SITE } from "./src/config.ts";
@@ -24,12 +23,19 @@ export default defineConfig({
       includePaths: ["./src/styles"],
     },
   },
-  integrations: [mdx(), icon(), terser({
-    compress: true,
-    mangle: true,
-  }), sitemap(), tailwind({
-    configFile: "./tailwind.config.mjs",
-  }), playformCompress(), react()],
+  integrations: [
+    mdx(),
+    icon(),
+    terser({
+      compress: true,
+      mangle: true,
+    }),
+    sitemap(),
+    tailwind({
+      configFile: "./tailwind.config.mjs",
+    }),
+    playformCompress(),
+  ],
   markdown: {
     shikiConfig: {
       theme: CODE_THEME,

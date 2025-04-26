@@ -3,7 +3,7 @@ site:
   tab: 喵落阁 # 浏览器标签栏上显示的文本
   title: 🤗 喵落阁 # 网站的标题
   description: 总有些事情高于其他！ # 网站的描述，用于SEO等
-  language: zh-CN # 网站的语言，例如 "en" 是英文
+  language: en # 网站的语言，例如 "en" 是英文
   favicon: /favicon.ico # 网站的图标，用于浏览器标签栏和其他地方显示
   theme: # 更多主题 https://daisyui.com/docs/themes/
     light: winter # 主题的浅色模式
