@@ -1,12 +1,6 @@
 ---
 import "medium-zoom/dist/style.css";
-import {
-  SITE_TAB,
-  SITE_DESCRIPTION,
-  SITE_FAVICON,
-  SITE_LANGUAGE,
-  SITE_THEME,
-} from "@config";
+import { SITE_TAB, SITE_DESCRIPTION, SITE_FAVICON, SITE_LANGUAGE, SITE_THEME } from "@config";
 import { ClientRouter } from "astro:transitions";
 import ElementCrossing from "astro-vtbot/components/ElementCrossing.astro";
 import PointerOnNavigation from "astro-vtbot/components/PointerOnNavigation.astro";
@@ -25,20 +19,14 @@ const { title, image, headings = [], showTOC = false } = Astro.props;
     <ClientRouter />
     <ElementCrossing />
     <PointerOnNavigation />
-    <Header
-      description={SITE_DESCRIPTION}
-      favicon={SITE_FAVICON}
-      image={image}
-    />
+    <Header description={SITE_DESCRIPTION} favicon={SITE_FAVICON} image={image} />
     <title>{`${title} - ${SITE_TAB}`}</title>
 
     <!-- Initial theme setup on first load -->
     <script define:vars={{ SITE_THEME }} is:inline>
       (function () {
         const storedTheme = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
         // Use stored theme if available, otherwise use system preference
         let theme;
@@ -79,9 +67,7 @@ const { title, image, headings = [], showTOC = false } = Astro.props;
 
     <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-4 gap-4 p-4">
-        <main
-          class="col-span-1 md:col-span-4 lg:col-span-3 bg-transparent order-1 md:order-2 mt-16 md:mt-0"
-        >
+        <main class="col-span-1 md:col-span-4 lg:col-span-3 bg-transparent order-1 md:order-2 mt-16 md:mt-0">
           <div class="flex flex-col gap-4">
             <slot />
             <Footer />
@@ -121,12 +107,8 @@ const { title, image, headings = [], showTOC = false } = Astro.props;
           button.addEventListener("click", async () => {
             const codeBlock = button.closest(".frosti-code");
             const code = codeBlock.querySelector("code").textContent;
-            const copyIcon = button.querySelector(
-              ".frosti-code-toolbar-copy-icon",
-            );
-            const successIcon = button.querySelector(
-              ".frosti-code-toolbar-copy-success",
-            );
+            const copyIcon = button.querySelector(".frosti-code-toolbar-copy-icon");
+            const successIcon = button.querySelector(".frosti-code-toolbar-copy-success");
 
             try {
               await navigator.clipboard.writeText(code);
