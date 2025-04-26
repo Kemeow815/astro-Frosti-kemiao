@@ -51,7 +51,7 @@ export interface HeaderProps {
 
 // ===== Widget Components =====
 export interface ThemeToggleProps {
-  class?: string;
+  className?: string;
 }
 
 export interface PaginationProps {
@@ -156,7 +156,7 @@ export interface TimelineItem {
 }
 
 export interface MainCardProps extends PostData {
-  class?: string;
+  className?: string;
   style?: string;
 }
 
