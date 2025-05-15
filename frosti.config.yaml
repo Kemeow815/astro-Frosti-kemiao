@@ -39,9 +39,9 @@ site:
           href: /blog/category/tech
           svg: "material-symbols:deployed-code-outline"
           target: _self
-        - id: life
-          text: 生活日记
-          href: /blog/category/life
+        - id: resourcw
+          text: 资源日记
+          href: /blog/category/resource
           svg: "material-symbols:earthquake-rounded"
           target: _self
         # 子菜单项配置
