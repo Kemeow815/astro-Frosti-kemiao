@@ -65,7 +65,7 @@ site:
 user:
   name: 克喵爱吃卤面 # 用户名
   site: "https://kmblog.kemiaosw.top" # 用户的网站链接
-  avatar: /touxiang.jpg # 用户头像路径
+  avatar: /kemiao.jpg # 用户头像路径
   sidebar: # 侧边栏配置
     social:
       - href: "https://afdian.com/a/kemiaofx_me" # 链接
